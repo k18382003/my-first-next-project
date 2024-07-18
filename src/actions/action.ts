@@ -1,6 +1,7 @@
 "use server";
 
 import prisma from "@/lib/db";
+import { revalidatePath } from "next/cache";
 
 interface myFormData {
     name: string,
@@ -24,4 +25,6 @@ export async function CreateCandidate(formData: FormData) {
             }
         }
     )
+
+    revalidatePath('/candidate')
 }
