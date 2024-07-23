@@ -3,8 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { UserProvider } from '@auth0/nextjs-auth0/client';
-
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,13 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-white">
-      <UserProvider>
-        <body className={`${inter.className} bg-slate-100 text-slate-950 flex flex-col min-h-screen w-[80vw] m-auto`}>
-          <Header />
-          {children}
-          <Footer />
-        </body>
-      </UserProvider>
+      <body className={`${inter.className} bg-slate-100 text-slate-950 flex flex-col min-h-screen w-[80vw] m-auto`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
