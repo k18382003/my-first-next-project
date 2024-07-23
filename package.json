@@ -10,7 +10,7 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
-    "@kinde-oss/kinde-auth-nextjs": "^2.3.5",
+    "@kinde-oss/kinde-auth-nextjs": "^2.3.6",
     "@prisma/client": "^5.17.0",
     "flowbite-react": "^0.10.1",
     "jsonwebtoken": "^9.0.2",
