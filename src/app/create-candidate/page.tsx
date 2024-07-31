@@ -8,7 +8,7 @@ export default async function Page() {
   const isUserAuthenticated = await isAuthenticated();
 
   if (!isUserAuthenticated) {
-    redirect('/api/auth/login?post_login_redirect_url=/create-candidate');
+    redirect('/api/auth/login');
   }
 
   return (

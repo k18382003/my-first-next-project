@@ -20,10 +20,10 @@ export async function CreateCandidate(formData: FormData) {
     } as myFormData;
 
     await prisma.candidates.create({
-            data: {
-                ...newCandidate
-            }
+        data: {
+            ...newCandidate
         }
+    }
     )
 
     revalidatePath('/candidate')
